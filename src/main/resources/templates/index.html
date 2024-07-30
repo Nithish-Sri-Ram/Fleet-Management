@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FleetGuy - To every direction</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body id="top">
+
+<!-- header -->
+<div th:replace="header :: header"></div>
+
+<main>
+    <article>
+        <!-- #HERO -->
+        <section class="section hero" aria-label="home" id="home"
+                 style="background-image: url('assets/images/hero-banner.jpg')">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="h1 hero-title">
+                        <span class="span">To Every</span> Direction
+                    </h2>
+                    <p class="hero-text">
+                        Streamline your fleet management with unmatched efficiency and transparency.
+                    </p>
+                    <a th:href="@{/service}" class="btn-outline">View Services</a>
+                    <img src="assets/images/hero-shape.png" width="116" height="116" loading="lazy"
+                         class="hero-shape shape-1">
+                    <img src="assets/images/hero-shape.png" width="116" height="116" loading="lazy"
+                         class="hero-shape shape-2">
+                </div>
+            </div>
+        </section>
+
+        <!-- other sections removed for brevity -->
+
+    </article>
+</main>
+
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+
+<!-- #BACK TO TOP -->
+<a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+</a>
+
+<!-- custom js link -->
+<script src="assets/js/script.js" defer></script>
+
+<!-- ionicon link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

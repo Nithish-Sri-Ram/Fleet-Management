@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FleetGuy - Dashboard</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body id="top">
+
+<!-- header -->
+<div th:replace="header :: header"></div>
+
+<div class="filler-div"></div>
+
+<main>
+    <article>
+
+
+        <!-- Welcome block -->
+        <section class="w3l-contact py-1" id="contact">
+            <div class="container py-md-1 py-1">
+                <div class="title-main text-center mx-auto mb-md-1 mb-1" style="max-width:500px;">
+                    <h3 class="title-style" th:text="${'Dashboard'}"></h3>
+                    <p th:text="${'You are logged in as admin'}"></p>
+                </div>
+            </div>
+        </section>
+        <!-- //Welcome block -->
+
+        <div class="container py-md-5 py-4">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="row m-t-25">
+                        <div class="col-sm-6 col-lg-3">
+                            <a th:href="@{/drivers}">
+                                <div class="overview-item overview-item--c3">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="fas fa-envelope-open-text"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>Registration Requests</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <a th:href="@{/orders}">
+                                <div class="overview-item overview-item--c3">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="fas fa-envelope-open-text"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>Service Requests</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+
+<!-- #BACK TO TOP -->
+<a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+</a>
+
+<!-- custom js link -->
+<script src="assets/js/script.js" defer></script>
+
+<!-- ionicon link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Transportio</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body id="top">
+
+<!-- header -->
+<div th:replace="header :: header"></div>
+
+<main>
+    <article>
+        <!-- #ABOUT -->
+        <section class="section about" id="about" aria-label="about">
+            <div class="container">
+                <figure class="about-banner img-holder" style="--width: 400; --height: 720;">
+                    <img src="assets/images/about-banner.jpg" width="400" height="720" loading="lazy" alt=""
+                         class="img-cover">
+                    <img src="assets/images/about-shape-1.png" width="260" height="170" loading="lazy" alt=""
+                         class="abs-img abs-img-1">
+                    <img src="assets/images/about-shape-2.png" width="500" height="500" loading="lazy" alt=""
+                         class="abs-img abs-img-2">
+                </figure>
+                <div class="about-content">
+                    <p class="section-subtitle">Why Choose Us</p>
+                    <h2 class="h2 section-title">We Are Professional Logistics & Cargo Agency</h2>
+                    <p class="section-text">
+                        Real-time updates and clear communication streamline operations, reducing delays
+                        and improving service quality
+                    </p>
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <div class="about-icon">
+                                <ion-icon name="chevron-forward"></ion-icon>
+                            </div>
+                            <p class="about-text">
+                                Go beyond logistics, make the world go round and revolutionize business.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-icon">
+                                <ion-icon name="chevron-forward"></ion-icon>
+                            </div>
+                            <p class="about-text">
+                                Logistics through innovation, dedication, and technology. ready, set, done.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-icon">
+                                <ion-icon name="chevron-forward"></ion-icon>
+                            </div>
+                            <p class="about-text">
+                                We take pride in serving our customers safely. together with passion.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-icon">
+                                <ion-icon name="chevron-forward"></ion-icon>
+                            </div>
+                            <p class="about-text">
+                                Imagination what we can easily see is only a small percentage.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-icon">
+                                <ion-icon name="chevron-forward"></ion-icon>
+                            </div>
+                            <p class="about-text">
+                                Quality never goes out of style. safety, quality, professionalism.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-icon">
+                                <ion-icon name="chevron-forward"></ion-icon>
+                            </div>
+                            <p class="about-text">
+                                The quality shows in every move we make where business lives.
+                            </p>
+                        </li>
+                    </ul>
+                    <a th:href="@{/service}" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+
+<!-- #BACK TO TOP -->
+<a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+</a>
+
+<!-- custom js link -->
+<script src="assets/js/script.js" defer></script>
+
+<!-- ionicon link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

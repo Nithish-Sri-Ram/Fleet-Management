@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Transportio</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body id="top">
+
+<!-- header -->
+<div th:replace="header :: header"></div>
+
+<main>
+    <article>
+        <!-- #SERVICE -->
+        <section class="section service" id="service" aria-label="service">
+            <div class="container">
+                <p class="section-subtitle">All Services</p>
+                <h2 class="h2 section-title">Trusted For Our Services</h2>
+                <p class="section-text">
+                    Embrace the future of fleet management with our cutting-edge solutions designed to connect and optimize every aspect of your operations.
+                </p>
+                <ul class="service-list grid-list">
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <img src="assets/images/service-icon-1.png" width="80" height="60" loading="lazy" alt="Truck">
+                            </div>
+                            <h3 class="h3 card-title">
+                                <span class="span">01</span> Air Freight
+                            </h3>
+                            <p class="card-text">
+                                Our aim is to optimize and improve your supply chain so that we can give you the best service.
+                            </p>
+                            <a th:href="@{/booking}" class="btn-link">
+                                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+                                <span class="span">View Detail</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <img src="assets/images/service-icon-2.png" width="74" height="60" loading="lazy" alt="Ship">
+                            </div>
+                            <h3 class="h3 card-title">
+                                <span class="span">02</span> Road Freight
+                            </h3>
+                            <p class="card-text">
+                                Our aim is to optimize and improve your supply chain so that we can give you the best service.
+                            </p>
+                            <a th:href="@{/booking}" class="btn-link">
+                                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+                                <span class="span">View Detail</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <img src="assets/images/service-icon-3.png" width="60" height="60" loading="lazy" alt="Airplane">
+                            </div>
+                            <h3 class="h3 card-title">
+                                <span class="span">03</span> Ocean Freight
+                            </h3>
+                            <p class="card-text">
+                                Our aim is to optimize and improve your supply chain so that we can give you the best service.
+                            </p>
+                            <a th:href="@{/booking}" class="btn-link">
+                                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+                                <span class="span">View Detail</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <img src="assets/images/service-icon-4.png" width="50" height="60" loading="lazy" alt="Train">
+                            </div>
+                            <h3 class="h3 card-title">
+                                <span class="span">04</span> Rail Freight
+                            </h3>
+                            <p class="card-text">
+                                Our aim is to optimize and improve your supply chain so that we can give you the best service.
+                            </p>
+                            <a th:href="@{/booking}" class="btn-link">
+                                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+                                <span class="span">View Detail</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <img src="assets/images/service-icon-5.png" width="63" height="60" loading="lazy" alt="Trolley">
+                            </div>
+                            <h3 class="h3 card-title">
+                                <span class="span">05</span> Warehousing
+                            </h3>
+                            <p class="card-text">
+                                Our aim is to optimize and improve your supply chain so that we can give you the best service.
+                            </p>
+                            <a th:href="@{/booking}" class="btn-link">
+<!--                                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>-->
+                                <span class="span">View Detail</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-card">
+                            <div class="card-icon">
+                                <img src="assets/images/service-icon-6.png" width="46" height="60" loading="lazy" alt="Paper">
+                            </div>
+                            <h3 class="h3 card-title">
+                                <span class="span">06</span> Project Cargo
+                            </h3>
+                            <p class="card-text">
+                                Our aim is to optimize and improve your supply chain so that we can give you the best service.
+                            </p>
+                            <a th:href="@{/booking}" class="btn-link">
+                                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+                                <span class="span">View Detail</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </article>
+</main>
+
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+
+<!--&lt;!&ndash; #BACK TO TOP &ndash;&gt;-->
+<!--<a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>-->
+<!--    <ion-icon name="chevron-up"></ion-icon>-->
+<!--</a>-->
+
+<!-- custom js link -->
+<script src="assets/js/script.js" defer></script>
+
+<!-- ionicon link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

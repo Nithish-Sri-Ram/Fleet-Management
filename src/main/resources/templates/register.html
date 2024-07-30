@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FleetGuy</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body id="top">
+
+<!-- header -->
+<div th:replace="~{header :: header}"></div>
+
+<main>
+    <article>
+        <!-- #CONTACT -->
+        <section class="section contact" id="contact" aria-label="contact">
+            <div class="container py-md-5 py-4">
+                <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
+                    <p class="text-uppercase">Get In Touch</p>
+                    <h3 class="title-style">Sign Up to Drive</h3>
+                </div>
+
+                <!-- Display Success Message -->
+                <div th:if="${success}" class="alert alert-success" role="alert">
+                    <span th:text="${success}"></span>
+                </div>
+
+                <!-- Display Error Message -->
+                <div th:if="${error}" class="alert alert-danger" role="alert">
+                    <span th:text="${error}"></span>
+                </div>
+
+                <form th:action="@{/register}" th:object="${driver}" method="post" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" th:field="*{name}" placeholder="Your Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" th:field="*{email}" placeholder="Your Email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" th:field="*{subject}" placeholder="Subject" class="form-control">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <select th:field="*{cargoService}" class="contact-input" required>
+                                <option value="" disabled selected>Select Cargo Service</option>
+                                <option value="air_freight">Air Freight</option>
+                                <option value="road_freight">Road Freight</option>
+                                <option value="ocean_freight">Ocean Freight</option>
+                                <option value="warehouse">Warehouse</option>
+                                <option value="rail_freight">Rail Freight</option>
+                                <option value="project_cargo">Project Cargo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea th:field="*{message}" placeholder="Your Message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </article>
+</main>
+
+<!-- footer -->
+<div th:replace="~{footer :: footer}"></div>
+
+<!-- #BACK TO TOP -->
+<a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+</a>
+
+<!-- custom js link -->
+<script src="assets/js/script.js" defer></script>
+
+<!-- ionicon link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
